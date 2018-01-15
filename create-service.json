@@ -1,0 +1,25 @@
+{
+    "cluster": "default", 
+    "serviceName": "service-geppetto", 
+    "taskDefinition": "gepapp-task-definition", 
+    "desiredCount": 1, 
+    "clientToken": "", 
+    "launchType": "FARGATE", 
+    "platformVersion": "LATEST", 
+    "role": "", 
+    "deploymentConfiguration": {
+        "maximumPercent": 100, 
+        "minimumHealthyPercent": 0
+    }, 
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-51cbee09"
+            ], 
+            "securityGroups": [
+                "sg-5c94dd27"
+            ], 
+            "assignPublicIp": "ENABLED"
+        }
+    }
+}

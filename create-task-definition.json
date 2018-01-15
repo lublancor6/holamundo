@@ -1,0 +1,35 @@
+{
+  "executionRoleArn": "arn:aws:iam::967636366309:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/gepapp-task-definition",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "entryPoint": [],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 80
+        }
+      ],
+      "command": [],
+      "cpu": 0,
+      "memory": 512,
+      "image": "967636366309.dkr.ecr.us-east-1.amazonaws.com/geppetto/httpd:latest",
+      "essential": true,
+      "name": "httpd-container"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "512",
+  "family": "gepapp-task-definition",
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "volumes": []
+}
