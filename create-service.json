@@ -1,7 +1,7 @@
 {
     "cluster": "default", 
     "serviceName": "service-geppetto", 
-    "taskDefinition": "gepapp-task-definition", 
+    "taskDefinition": "http-task", 
     "desiredCount": 1, 
     "clientToken": "", 
     "launchType": "FARGATE", 
