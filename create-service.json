@@ -2,6 +2,13 @@
     "cluster": "default", 
     "serviceName": "service-geppetto", 
     "taskDefinition": "http-task", 
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:967636366309:targetgroup/geppetto-tggroup/e179aa01aa242c8a", 
+            "containerName": "httpd-container", 
+            "containerPort": 80
+        }
+    ],
     "desiredCount": 1, 
     "clientToken": "", 
     "launchType": "FARGATE", 
